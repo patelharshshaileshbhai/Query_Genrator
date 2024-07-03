@@ -146,7 +146,7 @@ const AdminDashboard = () => {
     };
 
     fetchQueriesAndProfile();
-  }, []);
+  }, [localStorage.getItem("token")]);
 
   const updateQueryStatus = async (id, status) => {
     try {
