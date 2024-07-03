@@ -1,7 +1,7 @@
 import Query from '../models/Query.js';
 import sendEmail from '../middleware/sendMail.js';
 const createQuery = async (req, res) => {
-  const { title, description } = req.body;
+  const { name, description } = req.body;
 
   try {
     const query = new Query({
@@ -43,7 +43,7 @@ const updateQuery = async (req, res) => {
 
     // Send email notification
     const emailSubject = `Your query status has been updated`;
-    const emailText = `Dear User,\n\nYour query titled "${query.title}" has  "${status}".\n\nThank you.`;
+    const emailText = `Dear User,\n\nYour query titled "${query.name}" has  "${status}".\n\nThank you.`;
     await sendEmail(query.user.email, emailSubject, emailText);
 
     res.json(query);
