@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './QueryForm.css'; 
-
+import {BASE_URL} from '../../helper/config.js'
 const QueryForm = ({ addQuery }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -11,7 +11,7 @@ const QueryForm = ({ addQuery }) => {
     try {
       const token = localStorage.getItem('token');
       console.log(token);
-      const res = await axios.post(`http://localhost:8000/api/queries`, { title, description }, {
+      const res = await axios.post(`${BASE_URL}/queries`, { title, description }, {
         headers: {
           token:localStorage.getItem("token")
         },

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
-
+import {BASE_URL} from '../helper/config.js'
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const url = 'http://localhost:8000/api/auth/login';
+    const url = `${BASE_URL}/auth/login`;
     const payload = { email, password };
 
     try {

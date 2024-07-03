@@ -3,6 +3,7 @@ import axios from 'axios';
 import QueryForm from '../QueryForm/QueryForm.jsx'; 
 import { useLocation } from 'react-router-dom';
 import './UserDashboard.css'; 
+import {BASE_URL} from '../../helper/config.js'
 
 const UserDashboard = () => {
   const [queries, setQueries] = useState([]);
@@ -15,7 +16,7 @@ const UserDashboard = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/auth/me', {
+        const { data } = await axios.get(`${BASE_URL}/auth/me`, {
           headers: {
             token: localStorage.getItem("token") 
           },

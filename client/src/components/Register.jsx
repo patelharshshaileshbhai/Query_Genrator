@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
-
+import {BASE_URL} from '../helper/config.js'
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -43,7 +43,7 @@ const Register = () => {
       return;
     }
 
-    const url = `http://localhost:8000/api/auth/register`;
+    const url = `${BASE_URL}/auth/register`;
     const payload = { name, email, password, role };
 
     try {

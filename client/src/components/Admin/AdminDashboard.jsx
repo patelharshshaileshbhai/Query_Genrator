@@ -97,7 +97,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './AdminDashboard.css'; 
-
+import {BASE_URL} from '../../helper/config.js'
 const AdminDashboard = () => {
   const [queries, setQueries] = useState([]);
   const [adminProfile, setAdminProfile] = useState(null); 
@@ -113,7 +113,7 @@ const AdminDashboard = () => {
         }
 
         // Fetch admin profile
-        const profileRes = await axios.get('http://localhost:8000/api/auth/me', {
+        const profileRes = await axios.get(`${BASE_URL}/auth/me`, {
           headers: {
             token: localStorage.getItem("token"), 
           },
@@ -122,7 +122,7 @@ const AdminDashboard = () => {
         setAdminProfile(profileRes.data);
 
         // Fetch queries
-        const queriesRes = await axios.get('http://localhost:8000/api/queries', {
+        const queriesRes = await axios.get(`${BASE_URL}/queries`, {
           headers: {
             token: localStorage.getItem("token"), 
           },
@@ -156,7 +156,7 @@ const AdminDashboard = () => {
         return;
       }
 
-      const res = await axios.put(`http://localhost:8000/api/queries/${id}`, { status }, {
+      const res = await axios.put(`${BASE_URL}/queries/${id}`, { status }, {
         headers: {
           token: localStorage.getItem("token"), 
         },
