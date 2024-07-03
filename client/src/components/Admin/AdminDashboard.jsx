@@ -193,7 +193,7 @@ const AdminDashboard = () => {
         ) : (
           queries.map((query) => (
             <div key={query._id} className="query-card">
-              <h3> Title :- {query.name}</h3>
+              <h3> Name :- {query.name}</h3>
               <p>Query :- {query.description}</p>
               
               <select
