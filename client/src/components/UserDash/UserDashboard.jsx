@@ -64,7 +64,7 @@ const UserDashboard = () => {
       <QueryForm addQuery={addQuery} />
       {queries.map((query) => (
         <div key={query._id} className="query-card">
-          <h3 className="query-title">{query.title}</h3>
+          <h3 className="query-title"> {query.name}</h3>
           <p className="query-description">{query.description}</p>
         </div>
       ))}

@@ -3,7 +3,7 @@ import axios from 'axios';
 import './QueryForm.css'; 
 import {BASE_URL} from '../../helper/config.js'
 const QueryForm = ({ addQuery }) => {
-  const [title, setTitle] = useState('');
+  const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = async (e) => {
@@ -11,7 +11,7 @@ const QueryForm = ({ addQuery }) => {
     try {
       const token = localStorage.getItem('token');
       console.log(token);
-      const res = await axios.post(`${BASE_URL}/queries`, { title, description }, {
+      const res = await axios.post(`${BASE_URL}/queries`, { name, description }, {
         headers: {
           token:localStorage.getItem("token")
         },
@@ -28,9 +28,9 @@ const QueryForm = ({ addQuery }) => {
     <form onSubmit={handleSubmit} className="query-form">
       <input
         type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Your Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
         className="query-input"
       />
       <textarea
@@ -40,6 +40,7 @@ const QueryForm = ({ addQuery }) => {
         className="query-textarea"
       />
       <button type="submit" className="query-button">Submit Query</button>
+      <h5>Status Will be update on your email Id as soon as possible</h5>
     </form>
   );
 };
