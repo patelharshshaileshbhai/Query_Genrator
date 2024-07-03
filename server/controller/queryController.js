@@ -6,7 +6,7 @@ const createQuery = async (req, res) => {
   try {
     const query = new Query({
       user: req.user.id,
-      title,
+      name,
       description,
     });
 
