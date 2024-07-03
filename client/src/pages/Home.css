@@ -1,0 +1,43 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .home-container h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .home-container p {
+    font-size: 1.5rem;
+    color: #777;
+  }
+  .btn-reg {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .btn-reg:hover {
+    background-color: white;
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-reg a {
+    color: inherit;
+    text-decoration: none;
+  }

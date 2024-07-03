@@ -1,0 +1,90 @@
+/* AdminDashboard.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: dashed;
+}
+
+/* Admin Profile Styles */
+.admin-profile {
+  padding: 15px;
+  background-color: #eaf4f4;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.admin-profile h3 {
+  margin: 0;
+  color: #007bff;
+}
+
+.admin-profile p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.admin-profile strong {
+  color: #333;
+}
+
+/* Queries Container Styles */
+.queries-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.query-card {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.query-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.query-card p {
+  color: #666;
+}
+
+.query-card select {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}

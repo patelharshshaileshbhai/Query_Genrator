@@ -1,0 +1,112 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-container h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin: 10px 0;
+  }
+  
+  .dashboard-container p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .query-form-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .query-form-container h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .query-form-container input,
+  .query-form-container textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .query-form-container button {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .query-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .query-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .query-title {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .query-description {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    .dashboard-container h2 {
+      font-size: 2.5rem;
+    }
+  
+    .query-form-container,
+    .query-card {
+      width: calc(100% - 20px);
+    }
+  
+    .query-form-container input,
+    .query-form-container textarea {
+      width: calc(100% - 20px);
+    }
+  }
+  
